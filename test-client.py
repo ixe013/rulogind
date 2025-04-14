@@ -32,7 +32,7 @@ def rlogin_client(host, port, login_user, server_user=None, term_type='dumb'):
                     client_socket.sendall(message)
 
     except ConnectionRefusedError:
-        print(f"Erreur : Connexion refusée à {host}:513. Assurez-vous que le serveur rlogin est en cours d'exécution.")
+      print(f"Erreur : Connexion refusée à {host}:{port}. Assurez-vous que le serveur rlogin est en cours d'exécution.")
     except socket.gaierror:
         print(f"Erreur : Impossible de résoudre l'hôte '{host}'.")
     except Exception as e:
